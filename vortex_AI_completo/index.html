@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vortex · Información del hospital</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<ion-app>
+ <ion-split-pane content-id="main-content" when="lg">
+  <ion-menu class="sidebar" content-id="main-content" type="overlay">
+   <ion-content>
+    <div class="brand"><div class="brand-logo"></div><div><strong>VORTEX</strong><small>AI ASSISTANT</small></div></div>
+    <div class="menu-title">CENTRO DE CONTROL</div>
+    <nav class="nav">
+      <a class="active" href="index.html"><span class="nav-icon">▦</span>Panel hospitalario</a>
+      <a href="triage.html"><span class="nav-icon">✚</span>Nuevo triage</a>
+      <a href="estado-paciente.html"><span class="nav-icon">⌁</span>Estado del paciente</a>
+      <a href="historial.html"><span class="nav-icon">▤</span>Historial clínico</a>
+    </nav>
+   </ion-content>
+  </ion-menu>
+  <ion-page class="app" id="main-content">
+    <ion-header class="topbar"><ion-toolbar>
+      <ion-buttons slot="start"><ion-menu-button></ion-menu-button></ion-buttons>
+      <div slot="end" class="profile"><div class="profile-text"><strong>Dr. Gregory House</strong><span>Medicina de urgencias</span></div><div class="avatar">GH</div></div>
+    </ion-toolbar></ion-header>
+    <ion-content class="page-content">
+    <main class="content">
+      <section class="page-head">
+        <div><span class="eyebrow">VIERNES, 19 DE JUNIO</span><h1>Información del hospital</h1></div>
+        <div class="live"><i></i>Actualización en vivo</div>
+      </section>
+      <section class="metrics">
+        <article class="card metric"><div class="metric-icon">♟</div><div><span>Pacientes en espera</span><strong>12</strong><small>+3 en la última hora</small></div></article>
+        <article class="card metric"><div class="metric-icon">!</div><div><span>Casos críticos</span><strong>4</strong><small>Requieren atención</small></div></article>
+        <article class="card metric"><div class="metric-icon">✓</div><div><span>Atendidos hoy</span><strong>69</strong><small>82% del promedio</small></div></article>
+        <article class="card metric"><div class="metric-icon">◷</div><div><span>Espera aproximada</span><strong>24 min</strong><small>−7 min desde las 08:00</small></div></article>
+      </section>
+      <section class="dashboard">
+        <article class="card">
+          <div class="card-title"><div><span class="label">CAPACIDAD</span><h2>Ocupación de camillas</h2></div></div>
+          <div class="occupancy"><div class="donut"><div><strong>78%</strong><span>ocupadas</span></div></div><div class="legend"><p><i></i><b>28</b> Ocupadas</p><p><i></i><b>8</b> Disponibles</p><p><b>36</b> camillas totales</p></div></div>
+        </article>
+        <article class="card">
+          <div class="card-title"><div><span class="label">FLUJO DE PACIENTES</span><h2>Tiempo de espera</h2></div><span>Últimas 7 horas</span></div>
+          <div class="chart-number"><strong>24 min</strong><span>Promedio actual</span></div>
+          <div class="bars"><i style="height:34%"></i><i style="height:46%"></i><i style="height:42%"></i><i style="height:58%"></i><i style="height:72%"></i><i style="height:63%"></i><i style="height:84%"></i></div>
+        </article>
+      </section>
+    </main>
+    </ion-content>
+  </ion-page>
+ </ion-split-pane>
+</ion-app>
+</body>
+</html>

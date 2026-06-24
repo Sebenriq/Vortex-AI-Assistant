@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vortex · Historial clínico</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<ion-app>
+ <ion-split-pane content-id="main-content" when="lg">
+  <ion-menu class="sidebar" content-id="main-content" type="overlay">
+   <ion-content>
+    <div class="brand"><div class="brand-logo">♥</div><div><strong>VORTEX</strong><small>AI ASSISTANT</small></div></div>
+    <div class="menu-title">CENTRO DE CONTROL</div>
+    <nav class="nav">
+      <a href="index.html"><span class="nav-icon">▦</span>Panel hospitalario</a>
+      <a href="triage.html"><span class="nav-icon">✚</span>Nuevo triage</a>
+      <a href="estado-paciente.html"><span class="nav-icon">⌁</span>Estado del paciente</a>
+      <a class="active" href="historial.html"><span class="nav-icon">▤</span>Historial clínico</a>
+    </nav>
+   </ion-content>
+  </ion-menu>
+  <ion-page class="app" id="main-content">
+    <ion-header class="topbar"><ion-toolbar><ion-buttons slot="start"><ion-menu-button></ion-menu-button></ion-buttons><div slot="end" class="profile"><div class="profile-text"><strong>Dr. Gregory House</strong><span>Medicina de urgencias</span></div><div class="avatar">GH</div></div></ion-toolbar></ion-header>
+    <ion-content class="page-content">
+    <main class="content">
+      <section class="page-head"><div><span class="eyebrow">EXPEDIENTES CLÍNICOS</span><h1>Historial del paciente</h1></div></section>
+      <section class="search-panel"><input placeholder="⌕  Ingresa el ID o nombre del paciente"><span class="filter">▣ &nbsp; Filtrar por fecha</span></section>
+      <section class="card records">
+        <div class="records-top"><div><h2>Registros recientes</h2><p>5 expedientes encontrados</p></div><span>Exportar lista</span></div>
+        <div class="table-head"><span>PACIENTE</span><span>FECHA DE INGRESO</span><span>MOTIVO</span><span>CLASIFICACIÓN</span><span></span></div>
+        <div class="record"><div class="person"><div class="person-avatar">MG</div><div><strong>María González</strong><small>VTX-1042</small></div></div><span>19 Jun 2026</span><span>Dolor abdominal</span><span class="level orange">Moderado</span><span class="arrow">›</span></div>
+        <div class="record"><div class="person"><div class="person-avatar">CR</div><div><strong>Carlos Ramírez</strong><small>VTX-1038</small></div></div><span>19 Jun 2026</span><span>Dificultad respiratoria</span><span class="level red">Crítico</span><span class="arrow">›</span></div>
+        <div class="record"><div class="person"><div class="person-avatar">SM</div><div><strong>Sofía Martínez</strong><small>VTX-1027</small></div></div><span>18 Jun 2026</span><span>Traumatismo de muñeca</span><span class="level green">Leve</span><span class="arrow">›</span></div>
+        <div class="record"><div class="person"><div class="person-avatar">JS</div><div><strong>Jorge Sánchez</strong><small>VTX-1014</small></div></div><span>18 Jun 2026</span><span>Dolor torácico</span><span class="level yellow">Urgente</span><span class="arrow">›</span></div>
+        <div class="record"><div class="person"><div class="person-avatar">AT</div><div><strong>Ana Torres</strong><small>VTX-0998</small></div></div><span>17 Jun 2026</span><span>Fiebre persistente</span><span class="level orange">Moderado</span><span class="arrow">›</span></div>
+      </section>
+    </main>
+    </ion-content>
+  </ion-page>
+ </ion-split-pane>
+</ion-app>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vortex · Estado del paciente</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<ion-app>
+ <ion-split-pane content-id="main-content" when="lg">
+  <ion-menu class="sidebar" content-id="main-content" type="overlay">
+   <ion-content>
+    <div class="brand"><div class="brand-logo">♥</div><div><strong>VORTEX</strong><small>AI ASSISTANT</small></div></div>
+    <div class="menu-title">CENTRO DE CONTROL</div>
+    <nav class="nav">
+      <a href="index.html"><span class="nav-icon">▦</span>Panel hospitalario</a>
+      <a href="triage.html"><span class="nav-icon">✚</span>Nuevo triage</a>
+      <a class="active" href="estado-paciente.html"><span class="nav-icon">⌁</span>Estado del paciente</a>
+      <a href="historial.html"><span class="nav-icon">▤</span>Historial clínico</a>
+    </nav>
+   </ion-content>
+  </ion-menu>
+  <ion-page class="app" id="main-content">
+    <ion-header class="topbar"><ion-toolbar><ion-buttons slot="start"><ion-menu-button></ion-menu-button></ion-buttons><div slot="end" class="profile"><div class="profile-text"><strong>Dr. Gregory House</strong><span>Medicina de urgencias</span></div><div class="avatar">GH</div></div></ion-toolbar></ion-header>
+    <ion-content class="page-content">
+    <main class="content">
+      <section class="page-head"><div><span class="eyebrow">PACIENTE VTX-1042</span><h1>Reporte de estado del paciente</h1><p>Última actualización hace 3 minutos por Enfermería 2.</p></div></section>
+      <section class="patient"><div class="patient-avatar">MG</div><div class="patient-info"><small>PACIENTE</small><h2>María González</h2><p>34 años · Femenino · Alergia a penicilina</p></div><div class="stable"><i></i>Estado estable</div></section>
+      <div class="status-layout">
+        <div class="status-main">
+          <article class="card symptoms"><div class="card-title"><div><span class="label">EVALUACIÓN ACTUAL</span><h2>Síntomas reportados</h2></div><span>10:42</span></div><p>Dolor abdominal persistente en el cuadrante inferior derecho, acompañado de náuseas y fiebre leve desde hace aproximadamente 8 horas.</p><div class="tags"><span>Dolor 6/10</span><span>Náuseas</span><span>Fiebre leve</span></div></article>
+          <article class="card"><div class="card-title"><div><span class="label">MONITOREO</span><h2>Signos vitales</h2></div></div>
+            <div class="vitals">
+              <div class="vital"><span>Frecuencia cardiaca</span><strong>78</strong><small>lpm</small><em>Normal</em></div>
+              <div class="vital"><span>Presión arterial</span><strong>118/76</strong><small>mmHg</small><em>Normal</em></div>
+              <div class="vital"><span>Temperatura</span><strong>36.7</strong><small>°C</small><em>Normal</em></div>
+              <div class="vital"><span>Saturación de oxígeno</span><strong>97</strong><small>%</small><em>Normal</em></div>
+            </div>
+          </article>
+        </div>
+        <aside class="status-side">
+          <article class="card bed"><div class="bed-icon">▰</div><span class="label">UBICACIÓN ACTUAL</span><strong>Camilla 09</strong><p>Zona de observación B</p></article>
+          <article class="card"><div class="card-title"><div><span class="label">SEGUIMIENTO</span><h2>Evaluaciones rápidas</h2></div></div>
+            <div class="timeline-item"><i></i><div><strong>Valoración de enfermería</strong><span>Signos estables, dolor 6/10</span></div><time>10:42</time></div>
+            <div class="timeline-item"><i></i><div><strong>Ingreso a observación</strong><span>Asignación de camilla 09</span></div><time>10:18</time></div>
+            <div class="timeline-item"><i></i><div><strong>Clasificación de triage</strong><span>Nivel 3 · Moderado</span></div><time>10:05</time></div>
+          </article>
+        </aside>
+      </div>
+    </main>
+    </ion-content>
+  </ion-page>
+ </ion-split-pane>
+</ion-app>
+</body>
+</html>

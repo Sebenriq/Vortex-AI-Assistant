@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vortex · Nuevo triage</title>
+  <script type="module" src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.esm.js"></script>
+  <script nomodule src="https://cdn.jsdelivr.net/npm/@ionic/core/dist/ionic/ionic.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@ionic/core/css/ionic.bundle.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<ion-app>
+ <ion-split-pane content-id="main-content" when="lg">
+  <ion-menu class="sidebar" content-id="main-content" type="overlay">
+   <ion-content>
+    <div class="brand"><div class="brand-logo"></div><div><strong>VORTEX</strong><small>AI ASSISTANT</small></div></div>
+    <div class="menu-title">CENTRO DE CONTROL</div>
+    <nav class="nav">
+      <a href="index.html"><span class="nav-icon"></span>Panel hospitalario</a>
+      <a class="active" href="triage.html"><span class="nav-icon"></span>Nuevo triage</a>
+      <a href="estado-paciente.html"><span class="nav-icon"></span>Estado del paciente</a>
+      <a href="historial.html"><span class="nav-icon"></span>Historial clínico</a>
+    </nav>
+   </ion-content>
+  </ion-menu>
+  <ion-page class="app" id="main-content">
+    <ion-header class="topbar"><ion-toolbar><ion-buttons slot="start"><ion-menu-button></ion-menu-button></ion-buttons><div slot="end" class="profile"><div class="profile-text"><strong>Dr. Gregory House</strong><span>Medicina de urgencias</span></div><div class="avatar">GH</div></div></ion-toolbar></ion-header>
+    <ion-content class="page-content">
+    <main class="content">
+      <section class="page-head"><div><span class="eyebrow">ADMISIÓN DE URGENCIAS</span><h1>Nuevo proceso de triage</h1></div></section>
+      <div class="triage-layout">
+        <section class="card">
+          <div class="section-title"><span>01</span><div><h2>Datos personales</h2><p>Información de identificación del paciente.</p></div></div>
+          <div class="form-grid">
+            <label>Nombre del paciente<input placeholder="Ej. María Fernanda"></label>
+            <label>Apellidos<input placeholder="Ej. López García"></label>
+            <label>Edad<input placeholder="35"></label>
+            <label>Sexo<select><option>Seleccionar</option><option>Femenino</option><option>Masculino</option></select></label>
+          </div>
+          <hr>
+          <div class="section-title"><span>02</span><div><h2>Información clínica</h2><p>Describe el motivo y las observaciones relevantes.</p></div></div>
+          <label>Motivo de consulta<textarea placeholder="Describe los síntomas principales, su duración e intensidad..."></textarea></label>
+          <label>Observaciones del personal<textarea class="short" placeholder="Antecedentes, alergias o información adicional..."></textarea></label>
+          <span class="fake-button"> Analizar con Vortex AI</span>
+        </section>
+        <aside class="ai-panel">
+          <div class="ai-brand"> &nbsp; VORTEX AI</div>
+          <div class="ai-empty"><div class="ai-orbit"><i></i></div><h2>Resultado de IA</h2><p>Completa la información clínica para visualizar aquí la clasificación sugerida.</p></div>
+        </aside>
+      </div>
+    </main>
+    </ion-content>
+  </ion-page>
+ </ion-split-pane>
+</ion-app>
+</body>
+</html>
